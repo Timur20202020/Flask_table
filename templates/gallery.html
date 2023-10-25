@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio</title>
+	<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='css/Style.css') }}">
+</head>
+<body>
+	<h1><a href="https://yandex.ru/">Portfolio</h1>
+<div class="header">
+		<ul>
+			<li><a href="#">Сайт о городах</a></li>
+			<li><a href="#">Калькулятор</a></li>
+			<li><a href="#">Слайдер</a></li>
+			<li><a href="#">Список задач</a></li>
+			<li><a href="#">Мои контакты</a></li>
+		</ul>
+</div>
+		<h2 class="phrase">«У настоящего путешественника нет определенного плана и намерения куда-либо приехать» — Лао Цзы.
+</h2>
+<div class="block">
+
+	
+{% for i in images  %}
+<div class="card">
+	
+	<img src="{{ url_for('static', filename='images/' + i) }}" alt="{{ i }}">
+	<h2><a href="#">Мадрид</a></h2>
+	<h3>Испания</h3>
+	
+</div>
+{% endfor %}
+</div>
+	<h4><a href="#">Ещё</a></h4>
+	<h4>2018 © Разработка сайтов и приложений</h4>
+	<h4>Email: example@gmail.com</h4>
+
+</body>
+</html>
